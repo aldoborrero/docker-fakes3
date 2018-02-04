@@ -7,7 +7,7 @@ RUN mkdir -p /fakes3
 
 WORKDIR /fakes3
 
-ENTRYPOINT ["/usr/local/bin/fakes3"]
+ENTRYPOINT ["fakes3"]
 
 EXPOSE 4569
 
