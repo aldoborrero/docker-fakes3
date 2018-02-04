@@ -7,13 +7,13 @@ Deploys [fake-s3](https://github.com/jubos/fake-s3) in a Docker container.
 
 ## Differences
 
-This version, as opossed to [lphoward](https://github.com/lphoward/fake-s3/)'s one, is based on official Ruby alpine image (ruby:2.4.3-alpine3.6) which is lightweight. Also, it has a more modern version of fakes3.
+This version, as opposed to [lphoward](https://github.com/lphoward/fake-s3/)'s one, is based on official Ruby's alpine version (more concrete [ruby:2.4.3-alpine3.6](https://hub.docker.com/r/library/ruby/tags/2.4.3-alpine3.6/)) which is lightweight alternative to use Debian. Also, it includes a more modern version of fakes3.
 
 ## Usage
 
 To create a deployment:
 
-        $ docker run --name my_s3 -d lphoward/fake-s3
+        $ docker run --name my_s3 -d aldoborrero/fake-s3
 
 Service exposed on port 4569. Credentials are ignored. See [fake-s3](https://github.com/jubos/fake-s3) README for details/limitations.
 
@@ -23,7 +23,7 @@ If you want fake-s3 to be exposed on your Docker host on port 4569, then
 
 If you want the container to use a volume, then
 
-        $ docker run --name my_s3 -v /fakes3_root -d lphoward/fake-s3
+        $ docker run --name my_s3 -v /fakes3_root -d aldoborrero/fake-s3
 
 The fake-s3 root directory will then be added as a volume on the Docker host.  To get the volume
 
